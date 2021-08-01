@@ -1,0 +1,27 @@
+type Query {
+	firstQuery: String
+	contact(id: Long): ContactResponse
+}
+
+type ContactResponse {
+	id: Long
+	firstName: String!
+	lastName: String
+	birthDate: String
+	email: String
+	phones(phoneType: String): [PhoneResponse]
+	address: AddressResponse
+	fullName: String
+}
+
+type AddressResponse {
+	street: String!
+	suburb: String!
+	state: String!
+	postCode: String
+}
+
+type PhoneResponse {
+	phoneType: String
+	phoneNumber: String
+}
