@@ -1,8 +1,13 @@
 type Mutation {
 	createContact(request: CreateContactRequest) : ContactResponse
+	updateContact(request: CreateContactRequest) : ContactResponse
+	deleteContact(contactId: Long) : Boolean
+	updateAddress(request: CreateAddressRequest) : AddressResponse
+	deleteAddress(contactId: Long) : Boolean
 }
 
 input CreateContactRequest {
+	id: Long
 	firstName: String
 	lastName: String
 	birthDate: String
@@ -12,10 +17,12 @@ input CreateContactRequest {
 }
 
 input CreateAddressRequest {
+	id: Long
 	street: String!
 	suburb: String!
 	state: String!
 	postCode: String
+	contactId: Long
 }
 
 input CreatePhoneRequest {

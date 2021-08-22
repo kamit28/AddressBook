@@ -2,8 +2,8 @@ insert into address(id, street, suburb, state, post_code) values (address_seq.ne
 insert into address(id, street, suburb, state, post_code) values (address_seq.nextVal, '27 Lamonerie Street', 'Toongabbie', 'NSW', '2146');
 insert into address(id, street, suburb, state, post_code) values (address_seq.nextVal, '5 Grose Place', 'Seven Hills', 'NSW', '2147');
 insert into address(id, street, suburb, state, post_code) values (address_seq.nextVal, '5 Grose Place', 'Seven Hills', 'NSW', '2147');
-insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Amit', 'Kumar', to_date('15/09/1980', 'DD/MM/YYYY'), 'amit@gmail.com', 1);
-insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Anshu', 'Kumari', to_date('02/02/1985', 'DD/MM/YYYY'), 'anshu_kumari@myfunda.com', 2);
+insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Amit', 'Kumar', to_date('11/04/1981', 'DD/MM/YYYY'), 'amit@gmail.com', 1);
+insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Anshu', 'Kumari', to_date('07/04/1986', 'DD/MM/YYYY'), 'anshu_kumari@myfunda.com', 2);
 insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Sanjeev', 'Roy', to_date('24/08/1980', 'DD/MM/YYYY'), 'feku.roy@tiwari.com', 3);
 insert into contact(id, first_name, last_name, birth_date, email, address_id) values (contact_seq.nextVal, 'Krina', 'Roy', to_date('24/08/1983', 'DD/MM/YYYY'), 'rondu.roy@rudali.com', 4);
 insert into phone(id, contact_id, phone_type, phone_number) values (phone_seq.nextVal, 1, 'Home', '02-236-905-28');

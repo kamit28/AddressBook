@@ -10,4 +10,5 @@ import com.home.amit.model.Address;
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Long> {
 	Optional<Address> findByOwnerFirstName(String firstName);
+	Optional<Address> findByOwnerId(Long id);
 }

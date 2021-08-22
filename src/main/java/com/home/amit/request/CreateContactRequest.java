@@ -3,7 +3,7 @@ package com.home.amit.request;
 import java.util.List;
 
 public class CreateContactRequest {
-
+	private Long id;
 	private String firstName;
 	private String lastName;
 	private String birthDate;
@@ -12,6 +12,14 @@ public class CreateContactRequest {
 	private List<CreatePhoneRequest> phones;
 
 	public CreateContactRequest() {
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {

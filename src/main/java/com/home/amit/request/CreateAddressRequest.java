@@ -1,12 +1,30 @@
 package com.home.amit.request;
 
 public class CreateAddressRequest {
+	private Long id;
 	private String street;
 	private String suburb;
 	private String state;
 	private String postCode;
+	private Long contactId;
 
 	public CreateAddressRequest() {
+	}
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getContactId() {
+		return contactId;
+	}
+
+	public void setContactId(Long contactId) {
+		this.contactId = contactId;
 	}
 
 	public String getStreet() {

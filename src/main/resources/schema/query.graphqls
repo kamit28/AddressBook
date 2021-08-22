@@ -1,6 +1,7 @@
 type Query {
 	firstQuery: String
 	contact(id: Long): ContactResponse
+	contactsByLastName(lastName: String): [ContactResponse]
 }
 
 type ContactResponse {

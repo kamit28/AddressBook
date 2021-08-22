@@ -1,5 +1,8 @@
 package com.home.amit.query;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +20,17 @@ public class ContactQuery implements GraphQLQueryResolver {
 		this.searchService = service;
 	}
 
-	public String firstQuery() {
-		return "First ContactQuery Result";
-	}
-
 	public ContactResponse contact(long id) {
-		return new ContactResponse(searchService.getContactById(id));
+		var contact = searchService.getContactById(id);
+		if (contact == null) {
+			return null;
+		}
+		return new ContactResponse(contact);
 	}
 
+	public List<ContactResponse> contactsByLastName(String lastName) {
+		var contacts = searchService.getContactsByLastName(lastName);
+		var contactResponses = contacts.stream().map(c -> new ContactResponse(c)).collect(Collectors.toList());
+		return contactResponses;
+	}
 }

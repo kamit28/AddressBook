@@ -19,10 +19,10 @@ public record ContactResponse(Long id,
 
 	public ContactResponse(Contact contact) {
 		this(
-				null,
+				contact.getId(),
 				contact.getFirstName(),
 				contact.getLastName(),
-				null,
+				contact.getFirstName() + " " + contact.getLastName(),
 				df.format(contact.getBirthDate()),
 				contact.getEmail(),
 				null,
